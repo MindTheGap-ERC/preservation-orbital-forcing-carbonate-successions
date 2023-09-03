@@ -11,7 +11,7 @@ Open the R project, and run the code in "src/R/analysis.R". This will generate .
 
 ## 2. Generate CarboCATLite outputs
 
-Clone [CarboCATLite](https://github.com/MindTheGap-ERC/CarboCATLite), change to the _run_from_cli_ branch, and place the sea level curves generated in 1. in the folder "params/Dbplatform/".  
+Clone [CarboCATLite](https://github.com/MindTheGap-ERC/CarboCATLite), change to the _run_from_cli_ branch ([this commit](https://github.com/MindTheGap-ERC/CarboCATLite/tree/d2e4b5f32d75c865a1781ffca4d14fc250d30f77)), and place the sea level curves generated in 1. in the folder "params/Dbplatform/".  
 Then, run
 
 ```{matlab}
