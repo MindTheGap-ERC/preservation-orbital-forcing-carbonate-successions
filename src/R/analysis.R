@@ -5,6 +5,7 @@ library("lattice")
 library("palinsol")
 
 #### Utility function import ####
+# needed to generate insolated driven SL
 source("src/R/utils.R")
 
 #### Constants ####
@@ -14,14 +15,16 @@ timespan_obs_myr = 2.58 # duration of obs
 start_obs_myr_bp = 2.58 # whole Pleistocene
 grid_point_dist_km = 0.1 # res. of CarboCATLite
 sampling_freq_m = 0.05 # res of strat. columns
-max_amp_m_1 = 2 # maximum amplitude of sl curves
+
+# maximum amplitude of sl curves
+max_amp_m_1 = 2 
 max_amp_m_2 = 20
 
 # min & max freq examined in depth domain
 min_freq = 0.01
 max_freq = 10
 
-#### Generate Sea Level Curves
+#### Generate Sea Level Curves ####
 ins_sl_2m_amp = ins_to_sl(
   from = start_obs_myr_bp,
   to = start_obs_myr_bp - timespan_obs_myr,
@@ -45,8 +48,6 @@ time = matlab_raw_data$bathurst.20m.amp.time[1,]
 time = time[time <= timespan_obs_myr]
 dist_from_shore_km = seq_len(nrow(matlab_raw_data$bathurst.20m.amp.adm.along.dip)) * grid_point_dist_km
 
-
-
 #### Process 20 m ampl scenario ####
 res_list = list()
 for ( i in seq_along(dist_from_shore_km)){
@@ -61,6 +62,7 @@ lith_vals = rep(c(1,0), length(time)) # code lithologies with 0 and 1
 for (i in seq_along(res_list)){
   res_list[[i]][["bed_bdries"]] = unique(res_list[[i]]$height[duplicated(res_list[[i]]$height)])
 } 
+
 #### cyclostrat analysis ####
 for (i in seq_along(res_list)){
   loc = seq(from = 0, to = max(res_list[[i]]$bed_bdries), by = sampling_freq_m)
@@ -75,8 +77,6 @@ for (i in seq_along(res_list)){
 
 
 #### Figures ####
-
-
 make_completeness_fig = function(){
   pdf(file = "figs/completeness.pdf")
   compl = sapply(seq_along(dist_from_shore_km), function(x) res_list[[x]]$completeness)
@@ -128,7 +128,7 @@ make_completeness_fig()
 make_power_spec_plot()
 
 
-
+## plot expected frequency of significant frequencies in time domain
 signif_freq = mtm(ins_sl_20m_amp, verbose = FALSE, pl = 3,output = 3,genplot = FALSE)$Frequency
 
 height = sapply(seq_along(dist_from_shore_km), function(x) max(res_list[[x]]$height))
