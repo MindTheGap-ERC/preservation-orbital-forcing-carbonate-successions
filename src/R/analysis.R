@@ -89,7 +89,7 @@ make_completeness_fig = function(){
   dev.off()
 }
 
-make_power_spec_plot = function(){
+
   freq_interp = 10^seq(log10(min_freq), log10(max_freq), by = 0.1)
   mat = matrix(data = NA,
                nrow = 150,
@@ -102,7 +102,7 @@ make_power_spec_plot = function(){
   pdf(file = "./figs/power.pdf")
   lattice::levelplot(log10(mat))
   dev.off()
-}
+
 
 make_sl_plot = function(){
   pdf("figs/sl.pdf")
