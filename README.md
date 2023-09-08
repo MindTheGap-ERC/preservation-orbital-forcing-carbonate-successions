@@ -33,6 +33,10 @@ email: e.b.jarochowska [at] uu.nl
 Web page: [www.uu.nl/staff/EBJarochowska](https://www.uu.nl/staff/EBJarochowska)  
 ORCID: [0000-0001-8937-9405](https://orcid.org/0000-0001-8937-9405)
 
+## Poster
+
+![poster/Hohmann_Bathurst_Poster.svg](poster/Hohmann_Bathurst_Poster.svg)
+
 ## Reproduction of Results
 
 See file _REPRODUCEME.md_
