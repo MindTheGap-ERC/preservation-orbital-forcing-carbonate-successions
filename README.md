@@ -56,6 +56,7 @@ See file _REPRODUCEME.md_
 * _LICENSE_ : License text
 * _README_ : Readme file
 * _REPRODUCEME_ : Intructions for reproduction of results
+* _CITATION.cff_ : CItation info
 * _preservation-orbital-forcing-carbonate-successions.Rproj_ : Project file for Rstudio IDE
 
 ## Copyright
