@@ -60,8 +60,8 @@ See file _REPRODUCEME.md_
 * _preservation-orbital-forcing-carbonate-successions.Rproj_ : Project file for Rstudio IDE
 
 ## Citation
-To cite this repository, please use
-Hohmann, Niklas, Burgess, Peter, De Vleeschouwer, David, & Emilia Jarochowska. (2023). Preservation of Orbital Forcing in Incomplete Carbonate Successions (v1.0.2). Zenodo. [https://doi.org/10.5281/zenodo.8312823](https://doi.org/10.5281/zenodo.8312823)
+To cite this repository, please use  
+* Hohmann, Niklas, Burgess, Peter, De Vleeschouwer, David, & Emilia Jarochowska. (2023). Preservation of Orbital Forcing in Incomplete Carbonate Successions (v1.0.2). Zenodo. [https://doi.org/10.5281/zenodo.8312823](https://doi.org/10.5281/zenodo.8312823)
 
 ## Copyright
 
